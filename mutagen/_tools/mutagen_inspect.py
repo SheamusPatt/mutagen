@@ -9,7 +9,7 @@
 
 import sys
 
-from ._util import SignalHandler, OptionParser
+from _util import SignalHandler, OptionParser
 
 
 _sig = SignalHandler()
@@ -38,6 +38,6 @@ def main(argv):
         print(u"")
 
 
-def entry_point():
+if __name__ == "__main__":
     _sig.init()
-    return main(sys.argv)
+    main(sys.argv)
